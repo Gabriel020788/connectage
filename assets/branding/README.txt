@@ -1,0 +1,1 @@
+ConnectAge V3 branding assets. Derived from the official logo supplied for the project.

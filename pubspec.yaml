@@ -1,0 +1,30 @@
+name: conectage
+description: ConnectAge V3 - aplicativo acessível de rotina, bem-estar e lembretes.
+publish_to: 'none'
+version: 0.3.0+8
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supabase_flutter: ^2.17.2
+  alarm: ^5.13.1
+  flutter_tts: ^4.2.5
+  url_launcher: ^6.3.2
+  permission_handler: ^12.0.3
+  intl: ^0.20.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/branding/
+    - assets/images/connectage_gallery_fixed.b64
+    - assets/images/wellness/
+    - assets/images/recipes/
