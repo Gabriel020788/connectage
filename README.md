@@ -4,19 +4,18 @@ Aplicativo Flutter acessível para organização da rotina, bem-estar e lembrete
 
 ## V3 — identidade visual
 
-A branch `v3` introduz a nova identidade do ConnectAge baseada na logo oficial do projeto.
+Este repositório hospeda a versão V3 do ConnectAge.
 
 - Azul principal: `#0B5DBB`
 - Azul escuro: `#034F9E`
 - Laranja principal: `#F57C00`
 - Fundo claro: `#F7FAFE`
-- Tipografia e componentes mantêm foco em legibilidade e acessibilidade
-- Nova apresentação da logo no login, cadastro, início e perfil
+- Tipografia e componentes com foco em legibilidade e acessibilidade
 - Login e cadastro redesenhados
 - Tela inicial redesenhada
 - Navegação inferior redesenhada
 - Receitas, histórico e perfil redesenhados
-- Cards, campos, botões e estados visuais padronizados pela nova identidade
+- Cards, campos, botões e estados visuais padronizados pela identidade do projeto
 
 Versão atual da V3: `0.3.0+8`.
 
@@ -36,9 +35,9 @@ Versão atual da V3: `0.3.0+8`.
 
 ## Backend
 
-Projeto Supabase: `ConnectAge` (`bcctlrzbknzqctzyxtbn`, região `sa-east-1`).
+Projeto Supabase: `ConnectAge` (região `sa-east-1`).
 
-A migração da V2 cria `activity_history` e `trusted_contacts` com RLS e permanece compatível com a V3.
+O banco utiliza PostgreSQL, autenticação pelo Supabase Auth e Row Level Security (RLS) para isolamento dos dados por usuário.
 
 ## Dependências principais
 
@@ -49,29 +48,30 @@ A migração da V2 cria `activity_history` e `trusted_contacts` com RLS e perman
 - `permission_handler`
 - `intl`
 
-## Executar a V3
-
-Para preservar as versões anteriores, use uma pasta separada:
+## Executar o projeto
 
 ```powershell
-cd "C:\Users\karin\Documents\TCC BIEL\connectage"
-git clone --branch v3 https://github.com/kroseno/connectage.git connectage-v3
-cd connectage-v3
-code .
+git clone https://github.com/Gabriel020788/connectage.git
+cd connectage
 flutter clean
 flutter pub get
 flutter run
 ```
 
-Se a pasta `connectage-v3` já existir:
+Também existe a branch `v3`, mantida como referência da versão apresentada no TCC.
+
+## Gerar APK
 
 ```powershell
-git pull origin v3
-flutter clean
-flutter pub get
-flutter run
+flutter build apk --release
+```
+
+O APK será gerado em:
+
+```text
+build\app\outputs\flutter-apk\app-release.apk
 ```
 
 ## Assets
 
-A V3 inclui a identidade visual do ConnectAge em `assets/branding/`. As imagens de hábitos e receitas continuam locais para manter o TCC simples, gratuito e funcional offline.
+A identidade visual está em `assets/branding/`. As imagens de hábitos e receitas utilizadas pela V3 permanecem locais para manter o projeto simples e sem dependência de API externa para esses conteúdos.
